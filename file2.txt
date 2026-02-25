@@ -1,2 +1,3 @@
 bug1 fixed
+merge conflict
 i don't know what content i am adding here
