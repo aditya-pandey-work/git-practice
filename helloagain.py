@@ -1,5 +1,7 @@
 import multiprocessing
 import time
+import threading
+
 def task():
     print("hello")
     time.sleep(.5)
@@ -15,3 +17,13 @@ p1.join()
 
 
 print("hello from code")
+
+def task():
+    for i in range(10):
+        print(i, threading.current_thread().name)
+
+t1 = threading.Thread(target=task)
+t2 = threading.Thread(target=task)
+
+t1.start()
+t2.start()
