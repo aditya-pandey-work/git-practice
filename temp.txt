@@ -1,6 +1,3 @@
 hey
-<<<<<<< HEAD
 testing merge now
-=======
 what i should write?
->>>>>>> refs/remotes/origin/main
