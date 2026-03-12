@@ -18,6 +18,7 @@ p1.join()
 
 print("hello from code")
 
+
 def task():
     for i in range(10):
         print(i, threading.current_thread().name)
@@ -27,3 +28,18 @@ t2 = threading.Thread(target=task)
 
 t1.start()
 t2.start()
+
+
+def decorator(fun):
+    def wrapper():
+        print("inside wrapper")
+        fun()
+        print("exit from wrapper")
+    return wrapper
+
+@decorator
+def greet():
+    print("hello")
+
+greet()
+
